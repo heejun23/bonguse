@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>봉구스밥버거_pc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+
+  <!-- 파비콘 이미지 삽입하기 -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+
+
+
+  <!-- 1. 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+  <!-- 2. 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+
+  <!-- 3.메인서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+
+  <!-- 4.폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- 5.슬라이드서식 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css">
+
+
+
+  <!-- 사용자가 현재 페이지에 접속을 하면 접속한 디바이스기기를 체크해 모바일,태블릿일경우 모바일 페이지로 이동 -->
+  <script>
+    // 사용자가 접속한 디바이스 기기 체크
+    let mobile_keys = new Array('iPhone', 'iPad', 'Android', 'BackBerry', 'windows Phone', 'Window CE', 'LG', 'MOT', 'SAMSUNG', 'SonyErisson', 'Nokia');
+
+
+    // 만약에 웹페이지 주소뒤에 move_pc_screen값이 없다면
+    if (document.URL.match('move_pc_screen')) mobile_keys = null;
+
+    //위 뱌열값 개수만큼 반복해 검사를 하고 모바일 사용자면 아래 내용 실행
+    for (i in mobile_keys) {
+      //URL파라미터에 'move_pc_screen'가 포함되어 있자 않을때 아래 내용 적용
+      if (navigator.userAgent.match(mobile_keys[i]) != null) {
+        location.href = 'http://heejun.dothome.co.kr/00/m/index.html'; //모바일로 연결
+        break; //더이상 실행안함
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 헤더영역 -->
+  <header>
+    <div class="gnb_box">
+      <div class="back">
+
+        <div class="logo">
+          <h1><a href="index.html" title="메인바로가기">
+              <img src="./images/h1_logo.png" alt="상단로고">
+            </a></h1>
+        </div>
+
+        <ul class="gnb">
+          <li><a href="company.html" title="회사소개">회사소개</a>
+            <ul class="sub">
+              <li><a href="" title="CEO 인사말">CEO 인사말</a></li>
+              <li><a href="" title="봉구스밥버거">봉구스밥버거</a></li>
+              <li><a href="" title="회사연혁">회사연혁</a></li>
+              <li><a href="" title="오시는 길">오시는 길</a></li>
+            </ul>
+          </li>
+          <li><a href="menu.html" title="메뉴안내">메뉴안내</a>
+            <ul class="sub">
+              <li><a href="" title="메뉴안내">메뉴안내</a></li>
+            </ul>
+          </li>
+          <li><a href="group_order.html" title="단체주문">단체주문</a>
+            <ul class="sub">
+              <li><a href="" title="주문접수">주문 접수</a></li>
+              <li><a href="" title="주문내역">주문 내역</a></li>
+            </ul>
+          </li>
+          <li><a href="guide.html" title="고객안내">고객안내</a>
+            <ul class="sub">
+              <li><a href="" title="공지사항">공지사항</a></li>
+              <li><a href="" title="소식&이벤트">소식&이벤트</a></li>
+              <li><a href="" title="고객센터">고객센터</a></li>
+            </ul>
+          </li>
+          <li><a href="foundation.html" title="창업안내">창업안내</a>
+            <ul class="sub">
+              <li><a href="" title="창업 절차">창업 절차</a></li>
+              <li><a href="" title="창업 비용">창업 비용</a></li>
+              <li><a href="" title="창업 설명회">창업 설명회</a></li>
+              <li><a href="" title="창업 문의">창업 문의</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="login">
+          <li><a href="login.html" title="로그인">로그인</a></li>
+          <li>&#x007C;</li>
+          <li><a href="join.html" title="회원가입">회원가입</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- 01. 퀵메뉴 -->
+  <div id="quick">
+    <ul>
+      <li class="foundation">
+        <a href="#" title="창업문의">
+          <i class="fa-solid fa-shop"></i>
+          창업문의</a>
+      </li>
+      <li class="f_guide">
+        <a href="#" title="메뉴안내">
+          <i class="fa-solid fa-burger"></i>
+          메뉴안내</a>
+      </li>
+    </ul>
+    <div id="top">
+      <a href="" title="TOP" id="go_top">
+        <i class="fa-solid fa-caret-up"></i>
+        TOP</a>
+    </div>
+  </div>
+
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper fullpager">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!-- 1. 메인슬라이드 -->
+        <article class="slide">
+          <h2>슬라이드</h2>
+          <div class="swiper mySwiper second">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" title="이벤트1">
+                  <img src="./images/main1_815.png" alt="슬라이드1">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" title="이벤트2">
+                  <img src="./images/main2_815.png" alt="슬라이드2">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" title="이벤트3">
+                  <img src="./images/main3_815.jpg" alt="슬라이드3">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" title="이벤트4">
+                  <img src="./images/main4_815.jpg" alt="슬라이드4">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" title="이벤트5">
+                  <img src="./images/main5_815.jpg" alt="슬라이드5">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </article>
+      </div>
+
+
+
+      <!-- 2. 인기메뉴 -->
+      <div class="swiper-slide">
+        <section id="hot_menu">
+          <h2>인기메뉴</h2>
+          <article id="view">
+            <h2>뷰박스</h2>
+            <div class="image-box">
+              <ul class="f_list">
+                <li>
+                  <img src="./images/food1.png" alt="햄치즈">
+                  <div class="txt_box">
+                    <p class="f_title1">햄치즈</p>
+                    <p class="price1">4,300원</p>
+                    <p class="f_intro">햄도 치즈도 놓칠 수 없다면 선택!</p>
+                  </div>
+                </li>
+                <li><img src="./images/food2.png" alt="치킨마요">
+                  <div class="txt_box">
+                    <p class="f_title2">치킨마요</p>
+                    <p class="price2">4,200원</p>
+                    <p class="f_intro">바삭한 순살치킨에 고소한 마요네즈!</p>
+                  </div>
+                </li>
+                <li><img src="./images/food3.png" alt="쏘야">
+                  <div class="txt_box">
+                    <p class="f_title3">쏘야</p>
+                    <p class="price3">3,200원</p>
+                    <p class="f_intro">맛,영양,가격 3가지를 모두 갖춘 쏘야밥버거</p>
+                  </div>
+                </li>
+                <li><img src="./images/food4.png" alt="옛날도시락">
+                  <div class="txt_box">
+                    <p class="f_title4">옛날도시락</p>
+                    <p class="price4">5,000원</p>
+                    <p class="f_intro">맛있는건 다 있는 영양만점 추억의 도시락</p>
+                  </div>
+                </li>
+                <li><img src="./images/food5.png" alt="오므라이스">
+                  <div class="txt_box">
+                    <p class="f_title5">오므라이스</p>
+                    <p class="price5">3,500원</p>
+                    <p class="f_intro">달콤새콤 케첩듬뿍 봉구스표 오므라이스</p>
+                  </div>
+                </li>
+              </ul>
+
+              <!--   clone     -->
+              <div class="clone">
+                <ul class="f_list">
+                  <li><img src="./images/food1.png" alt="햄치즈">
+                    <div class="txt_box">
+                      <p class="f_title1">햄치즈</p>
+                      <p class="price1">4,300원</p>
+                      <p class="f_intro">햄도 치즈도 놓칠 수 없다면 선택!</p>
+                    </div>
+                  </li>
+                  <li><img src="./images/food2.png" alt="치킨마요">
+                    <div class="txt_box">
+                      <p class="f_title2">치킨마요</p>
+                      <p class="price2">4,200원</p>
+                      <p class="f_intro">바삭한 순살치킨에 고소한 마요네즈!</p>
+                    </div>
+                  </li>
+                  <li><img src="./images/food3.png" alt="쏘야">
+                    <div class="txt_box">
+                      <p class="f_title3">쏘야</p>
+                      <p class="price3">3,200원</p>
+                      <p class="f_intro">맛,영양,가격 3가지를 모두 갖춘 쏘야밥버거</p>
+                    </div>
+                  </li>
+                  <li><img src="./images/food4.png" alt="옛날도시락">
+                    <div class="txt_box">
+                      <p class="f_title4">옛날도시락</p>
+                      <p class="price4">5,000원</p>
+                      <p class="f_intro">맛있는건 다 있는 영양만점 추억의 도시락</p>
+                    </div>
+                  </li>
+                  <li><img src="./images/food5.png" alt="오므라이스">
+                    <div class="txt_box">
+                      <p class="f_title5">오므라이스</p>
+                      <p class="price5">3,500원</p>
+                      <p class="f_intro">달콤새콤 케첩듬뿍 봉구스표 오므라이스</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <a href="#" title="메뉴더보기" class="btn">메뉴 더보기</a>
+          </article>
+        </section>
+      </div>
+
+
+      <!-- 이벤트 -->
+      <div class="swiper-slide">
+
+        <div class="swiper mySwiper Event">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <section class="event">
+                <h2>이벤트</h2>
+                <article>
+                  <div class="e_img">
+                    <img src="./images/event1resize.jpg" alt="event">
+                  </div>
+                  <div class="e_right">
+                    <h3>이벤트</h3>
+                    <h4>새 메뉴 먹고 신발 할인쿠폰 받자!</h4>
+                    <h5>할인쿠폰 사용방법</h5>
+                    <p class="e_txt">1. 봉구스밥버거 ‘신’ 메뉴 먹고 ABC마트 ‘신’ 발 쿠폰 받기.<br>2. Play store 또는 App store에서 ‘ABC마트’를
+                      검색하고<br>어플 설치하기 (QR코드 이용 가능)<br>3. ABC마트 멤버십 회원 가입 후 쿠폰등록 하기<br>회원가입 > 마이페이지 > 쿠폰 > 쿠폰등록 <br>4.
+                      등록된 쿠폰을 확인 후 ABC마트에서 사용하면 끝!</p>
+                    <a href="#">자세히 보기</a>
+                  </div>
+                </article>
+              </section>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="event">
+                <h2>이벤트</h2>
+                <article>
+                  <div class="e_img">
+                    <img src="./images/event2.jpg" alt="event">
+                  </div>
+                  <div class="e_right">
+                    <h3>이벤트</h3>
+                    <h4>저스툰 접속하고 [봉구스밥버거]<br>입력하면 10코인 자동충전!</h4>
+                    <h5>참여방법</h5>
+                    <p class="e_txt">1. 저스툰에 접속한다.<br>
+                      2. [봉구스밥버거]를 입력한다.<br>
+                      3. 작품을 감상한다.<br>
+                      이벤트기간<br>
+                      2024.00.00 ~ 2024.00.00
+                    </p>
+                    <a href="#">자세히 보기</a>
+                  </div>
+                </article>
+              </section>
+            </div>
+
+            <div class="swiper-slide">
+              <section class="event">
+                <h2>이벤트</h2>
+                <article>
+                  <div class="e_img">
+                    <img src="./images/event3.jpg" alt="event">
+                  </div>
+                  <div class="e_right">
+                    <h3>이벤트</h3>
+                    <h4>한정판 볼펜 봉나미볼펜 출시!</h4>
+                    <h5>구매방법</h5>
+                    <p class="e_txt">새학기를 맞이해 공부의욕을 200% 올려줄<br>
+                      한정한 '봉나미'가 출시되었습니다!<br>
+                      신메뉴 에헴밥버거 또는 햄볶밥버거를 드시는 고객님께 한하여<br>'봉나미' 구매 기회를 드립니다...&#x2605;<br>
+                      새학기 성적 향상을 위하여 열공을 위한 마음도 먹고!<br>
+                      열공을 위해 허기진 속을 달래줄 봉구스 신메뉴도 먹고!<br>
+                      ‘봉나미’를 만나 꿈을 이루어보세요+_+<br>
+                      봉구스밥버거는 모든 고객분들의 꿈을 응원합니다. 감사합니다!
+                    </p>
+                    <a href="#">자세히 보기</a>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+
+      <!-- 4. 봉구스 스토리 -->
+      <div class="swiper-slide">
+        <section id="story">
+          <h2>봉구스 스토리</h2>
+          <article class="img_box">
+            <h2>봉구스 스토리</h2>
+            <div class="s_box">
+              <p>언제나 든든하고 따뜻한<br>봉구스 밥버거입니다.</p>
+
+              <a href="#" title="봉구스 스토리" class="btn">봉구스 스토리</a>
+            </div>
+          </article>
+        </section>
+      </div>
+
+
+      <!-- 5. 매장찾기 -->
+      <div class="swiper-slide">
+        <section id="map">
+          <h2>매장찾기</h2>
+          <article class="mapbox">
+            <div class="google_map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.855541545392!2d127.03072647629646!3d37.558467124589875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca35c47f3fd7d%3A0x4ed746c1fda882e7!2z67SJ6rWs7Iqk67Cl67KE6rGw!5e0!3m2!1sko!2skr!4v1729832684392!5m2!1sko!2skr"
+                frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <h3>우리동네 매장찾기</h3>
+            <div class="map_info">
+              <fieldset id="search_box">
+                <input type="search" placeholder="매장명 or 주소 검색" id="search">
+                <i class="fas fa-search"></i>
+                <label for="search"></label>
+              </fieldset>
+
+              <ul class="add01">
+                <li>가경2호점</li>
+                <li>충청북도 청주시 흥덕구 가경로 72</li>
+                <li><i class="fa-solid fa-phone"></i>043-231-5082</li>
+              </ul>
+              <ul class="add02">
+                <li>가산디폴리스점</li>
+                <li>서울특별시 금천구 서부샛길 606</li>
+                <li><i class="fa-solid fa-phone"></i>02-861-9942</li>
+              </ul>
+              <ul class="add03">
+                <li>가음점</li>
+                <li>경상남도 창원시 성산구 가양로 48-1</li>
+                <li><i class="fa-solid fa-phone"></i>055-283-9989</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <!-- 푸터영역 -->
+        <footer>
+          <div class="f_top">
+            <nav class="f_nav">
+              <ul>
+                <li><a href="#" title="이용약관">이용약관</a></li>
+                <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="f_bottom">
+            <address>
+              <p>(주)부자이웃 서울특별시 도봉구 노해로 391 6층 1호(창동, 네네빌딩)<br>대표 : 현광식 사업자번호 : 124-87-40615 전화 : 1661-5094 팩스 :
+                02-2051-5094<br>메일 : bongousse1000@nate.com<br><br>Copyright ⓒ 부자이웃CO. LTD. All rights reserved.</p>
+            </address>
+
+            <ul class="sns">
+              <li>
+                <a href="https://www.facebook.com/qkqqjrj" title="페이스북" class="icon">
+                  <i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/bongousse_official/" title="인스타그램" class="icon">
+                  <i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="award_list">
+            <ul class="award">
+              <li><img src="./images/ico_footer1.gif" alt=""></li>
+              <li class="award_txt">매일경제 주최 2015<br>100대 프렌차이즈 선정</li>
+              <li><img src="./images/ico_footer2.gif" alt=""></li>
+              <li class="award_txt">2013 대한민국 대표<br>우수기업 인증</li>
+              <li><img src="./images/ico_footer3.gif" alt=""></li>
+              <li class="award_txt">소상공인진흥공단<br>동반성장 우수기업 선정</li>
+              <li><img src="./images/ico_footer4.gif" alt=""></li>
+              <li class="award_txt">특허청<br>주먹밥 배달업등 15건</li>
+              <li class="award_txt2">2014<br>우수프랜차이즈</li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+  <!-- 스와이퍼 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var fullswiper = new Swiper(".fullpager", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var secondswiper = new Swiper(".second", {
+      slidesPerView: 1, //화면에 보여지는 이미지 개수
+      spaceBetween: 0, //이미지간 간격 설정
+      loop: true,      //슬라이드 이미지 로테이션 설정 false
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {   //좌우버튼 옵션
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    var eventswiper = new Swiper(".Event", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    document.getElementById('go_top').onclick = function(e) {
+        e.preventDefault();
+        // Swiper 슬라이더의 첫 번째 슬라이드로 부드럽게 이동
+        fullswiper.slideTo(0, 500, true); // 슬라이드 인덱스, 전환 시간(ms), 효과
+    };
+  })
+  </script>
+
+</html>
